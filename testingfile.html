@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web and App Theory - task</title>
+</head>
+
+
+<style>
+
+/* Navigation */
+
+.navigation1 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: minmax(200px, 1fr) 200px 200px 200px;
+  background-color: #EBEBEB;
+  color: #444;
+  margin:10px;
+  align-items: center;
+  font-size:18px;
+}
+
+
+.nav {
+  background-color: transparent;
+  color: #000;
+  padding: 20px;
+  margin-left:20px;
+}
+
+
+/* Footer */
+
+.footer {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #000000;
+  color: #ffffff;
+  margin:10px;
+  align-items: center;
+  font-size:18px;
+}
+
+
+.footernav {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 20px;
+  margin-left:20px;
+}
+
+
+
+
+/* Content */
+
+
+body {
+  margin: 40px;
+  font-size:18px;
+  max-width:1300px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color:black;
+}
+
+body a {
+  font-size:22px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:black;
+  text-decoration:none;
+  font-weight:bolder;
+}
+
+body a:hover {
+  color:rgb(132, 132, 132);
+
+}
+
+.content {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFC3BA;
+    color: #000000;
+    margin: 10px;
+  }
+
+  .box {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 40px;
+    font-size: 150%;
+  }
+
+  .content2 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    background-color: #D07A46;
+    color: #000000;
+    margin: 10px;
+  }
+
+  .content5 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    color: #000000;
+    margin: 10px;
+  }
+
+/*   CONTENTBOX 1 */
+
+  .a { /* content */
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-top:100px;
+  }
+  .b { /* photo */
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  /*   CONTENTBOX 2 */
+
+  .c { /* photo */
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+  .d { /* content */
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin-top:100px;
+    margin-left:-30px;
+  }
+
+
+  .box img {
+    border-style:solid;
+    border-color: white;
+    object-fit: cover;
+    width: 520px;
+    height: 480px;
+    border-width: 30px;
+}
+
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius:20px;
+}
+
+button:hover {
+  background-color: rgb(82, 82, 82);
+}
+
+
+/* CONTENTBOX 3 */
+
+.content3 {
+    background-color: #D07A46;
+    color: #000000;
+    margin: 10px;
+    padding:40px;
+  }
+
+
+  .content3 h1 {
+    text-align:center;
+  }
+
+
+  /* CONTENT TEXT */
+
+  .content_text h3 {
+    text-align:center;
+  }  
+
+  .content_text {
+    background-color: #AFA29D;
+    color: #000000;
+    margin: 10px;
+    padding:40px;
+  }
+
+
+
+  /* CONTENT 4 */
+
+  .content4 {
+    background-color: #FFC3BA;
+    color: #000000;
+    margin: 10px;
+    padding:40px;
+  }
+
+
+  .content4 h1 {
+    text-align:center;
+    color:black;
+  }
+
+  /* CONTENT 5 */
+
+  .content5 {
+    background-color: #5D4334;
+    color: #000000;
+    margin: 10px;
+    padding-top:40px;
+  }
+
+
+  .content5 h3 {
+    color:rgb(255, 255, 255);
+  }
+
+
+/* Cat customers */
+
+.customers {
+    display: grid;
+    gap: 0.8em;
+    grid-template-areas:
+      "one two three four"
+      "five six seven eight";
+      justify-content:center;
+  }
+
+  .image:nth-child(1) {
+    grid-area: one;
+  }
+  .image:nth-child(2) {
+    grid-area: two;
+  }
+  .image:nth-child(3) {
+    grid-area: three;
+  }
+  .image:nth-child(4) {
+    grid-area: four;
+  }
+  .image:nth-child(5) {
+    grid-area: five;
+  }
+  .image:nth-child(6) {
+    grid-area: six;
+  }
+  .image:nth-child(7) {
+    grid-area: seven;
+  }
+  .image:nth-child(8) {
+    grid-area: eight;
+  }
+
+
+/* PRICES */
+
+.prices {
+    display: grid;
+    gap: 0.8em;
+    grid-template-areas:
+      "one two three";
+      justify-content:center;
+  }
+
+  .priceimage:nth-child(1) {
+    grid-area: one;
+  }
+  .priceimage:nth-child(2) {
+    grid-area: two;
+  }
+  .priceimage:nth-child(3) {
+    grid-area: three;
+  }
+
+  .priceimage {
+    border-style:solid;
+    border-color: white;
+    object-fit: cover;
+    width: 250px;
+    height: 550px;
+    border-width: 20px;
+}
+
+
+/* ANIMATIONS */
+
+
+h1 {
+    transform: translateX(-400px);
+    animation: slideInFromRight 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInFromRight{
+    from {
+        transform: translateX(20px);
+    }
+    to {
+        transform: translateX(0);
+    }
+
+    
+}
+
+
+/*kuvaefekti */
+
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+    border-style:solid;
+    border-color: white;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border-width: 20px;
+}
+
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #000000a4;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffffe5;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.container:hover .overlay2 {
+  opacity: 0.9;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text2 {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight:bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+/* TABLET SIZE 1200px */
+
+
+@media screen and (max-width: 1200px){
+    .customers {
+        display: grid;
+        gap: 0.8em;
+        grid-template-areas:
+        "one two three"
+        "five six seven";
+        justify-content: center;
+}
+}
+
+/* MOBILE SIZE 1200px */
+
+@media screen and (max-width: 900px){
+body a {
+    font-size: 18px;
+}
+}
+
+
+@media screen and (max-width: 900px){
+    .customers {
+        display: grid;
+        gap: 0.8em;
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five" 
+        "six"
+        "seven" 
+        "eight";
+        justify-content: center;
+}
+}
+
+@media screen and (max-width: 900px){
+.navigation1 {
+  display: flex;
+  flex-direction:column;
+  grid-gap:0;
+  background-color: #EBEBEB;
+  color: #444;
+  align-items: center;
+  font-size:12px;
+}
+}
+
+@media screen and (max-width: 900px){
+.nav {
+  padding: 10px;
+}
+}
+
+@media screen and (max-width: 900px){
+.content {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+}
+
+
+@media screen and (max-width: 900px){
+.box img {
+    border-style:solid;
+    border-color: white;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-width: 10px;
+}
+}
+
+@media screen and (max-width: 900px){
+.box {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 120%;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 900px){
+.content2 {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+}
+
+@media screen and (max-width: 900px){
+.box h3 {
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+
+/* PRICES */
+
+
+@media screen and (max-width: 900px){
+.prices {
+    display: grid;
+    gap: 0.4em;
+    grid-template-areas: 
+    "one"
+    "two" 
+    "three";
+    justify-content: center;
+}
+}
+
+
+
+@media screen and (max-width: 900px){
+.priceimage {
+    border-style:solid;
+    border-color: white;
+    object-fit: cover;
+    width: 350px;
+    height: 100px;
+    border-width: 10px;
+}
+}
+
+
+@media screen and (max-width: 900px){
+.text2 {
+  font-size: 20px;
+
+}
+}
+
+
+@media screen and (max-width: 900px){
+.content5 {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+
+}
+}
+
+@media screen and (max-width: 900px){
+.box h3 {
+    text-align: center;
+    max-width:100%;
+
+}
+}
+
+
+@media screen and (max-width: 900px){
+.footer {
+  display: flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+}
+
+@media screen and (max-width: 900px){
+.footernav {
+  padding:5px;
+}
+}
+
+@media screen and (max-width: 900px){
+.footernav img {
+  padding:20px;
+}
+}
+
+
+@media screen and (max-width: 900px){
+
+.d { /* content */
+    margin-top:0px;
+    margin-left:0px;
+  }
+}
+
+@media screen and (max-width: 900px){
+.a { /* content */
+    margin-top:10px;
+    margin-left:0px;
+  }
+}
+
+
+
+
+
+  </style>
+  <body>
+
+<header>
+    <div class="navigation1">
+        <div class="nav 1"><img src="catsytunes_logo.png" alt="logo" ></div>
+        <div class="nav 2"><a href="#">ABOUT</a></div>
+        <div class="nav 3"><a href="#">PRICES</a></div>
+        <div class="nav 4"><a href="#">CONTACT</a></div>
+      </div>
+</header>
+ 
+
+      <div class="content">
+        <div class="box a"><h1>Music for cats? Yes.</h1>
+            <p>Loreen Ipsum is a talented songwriter who composes music and creates musical landscapes especially for cats.</p>
+            <button>Ask for offer!</button></div>
+        <div class="box b"><img src="cat-6102791_1280.jpg" alt=""></div>
+      </div>
+
+      <div class="content2">
+        <div class="box d">
+            <h3>You might think cats don't listen to music? They actually do. <br><br>And they love it! </h3></div>
+        <div class="box c"><img src="cat-323262_1280.jpg" alt=""></div>
+      </div>
+
+
+      <div class="content_text"><div>
+            <h3>My name is Loreen Ipsum and I have good news for you. Every cat has its own unique and very specific taste in music. We might think all cats enjoy old folk music but some prefer even extreme metal. 
+                I'm here to help you and your cat. Together we will find your cat's favourite tunes...
+                and eventually create one together!</h3></div>
+      </div>
+
+
+
+      <div class="content3"> <h1>HAPPY CUSTOMERS</h1>
+        <div class="customers">
+            <div class="container"><img src="cat1.jpg" alt="" class="image"><div class="overlay"><div class="text">Trad. Folk</div></div></div>
+            <div class="container"><img src="cat2.jpg" alt="" class="image"><div class="overlay"><div class="text">Elton John</div></div></div>
+            <div class="container"><img src="cat3.jpg" alt="" class="image"><div class="overlay"><div class="text">Satanic metal</div></div></div>
+            <div class="container"><img src="cat5.jpg" alt="" class="image"><div class="overlay"><div class="text">Swamp blues</div></div></div>
+            <div class="container"><img src="cat6.jpg" alt="" class="image"><div class="overlay"><div class="text">The Beatles</div></div></div>
+            <div class="container"><img src="cat7.jpg" alt="" class="image"><div class="overlay"><div class="text">ABBA</div></div></div>
+            <div class="container"><img src="cat8.jpg" alt="" class="image"><div class="overlay"><div class="text">Cat Cat</div></div></div>
+            <div class="container"><img src="cat9.jpg" alt="" class="image"><div class="overlay"><div class="text">Meat Loaf</div></div></div>
+        </div>
+      </div>
+
+
+
+      <div class="content4"> <h1>PRICES</h1>
+        <div class="prices">
+            <div class="container"><img src="cat1.jpg" alt="" class="priceimage"><div class="overlay2"><div class="text2">Super 250 €</div></div></div>
+            <div class="container"><img src="cat2.jpg" alt="" class="priceimage"><div class="overlay2"><div class="text2">Mega 500 €</div></div></div>
+            <div class="container"><img src="cat10.jpg" alt="" class="priceimage"><div class="overlay2"><div class="text2">Turbo 1000 €</div></div></div>
+        </div>
+      </div>
+
+
+
+      <div class="content5">
+        <div class="box d">
+            <h3>What are you waiting for! <br></h3><button>Ask for offer!</button></div>
+        <div class="box c"><img src="cat11.jpg" alt=""></div>
+      </div>
+    </div>
+
+
+
+
+        <footer>
+            <div class="footer">
+                <div class="footernav 1"><img src="catsytunes_logo2.png" alt="logo" ></div>
+                <div class="footernav 2"><p>Loreen Ipsum <br>Fake Address 666<br>Fake Town</p></div>
+                <div class="footernav 3"><p></p> Fakebook <br>Quitter<br>Instadrum</p></div>
+                <div class="footernav 4"><p>Email</p></div>
+              </div>
+            </footer>
+
+
+
+
+  </body>
+
+
+<body>
+
+
+
+
+
+
+    
+</body>
+</html>
